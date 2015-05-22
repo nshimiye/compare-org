@@ -42,18 +42,34 @@
             <a class="js-delete-list nav-item">
               <span class="icon-trash" title="Delete list"></span>
             </a>
+
+            <a class="js-addpost-list nav-item">
+              <span class="icon-plus" title="Add-post list"></span>
+            </a>
+
           </div>
         </div>
       {{/if}}
 
       <form class="js-todo-new todo-new input-symbol">
-        <input type="text" placeholder="Type to add new tasks">
-        <span class="icon-add js-todo-add"></span>
+        <input type="text" placeholder="Chose category">
+        <span class="js-todo-add"></span>
+        <!-- <span class="icon-add js-todo-add"></span> -->
       </form>
     </nav>
 
 
     <div class="content-scrollable list-items">
+      <div class="list-item {{checkedClass}} {{editingClass}}" style="border-bottom: 1px solid black;">
+        <label class="checkbox">
+          <!-- <input type="checkbox" name="checked"> -->
+          <span class="checkbox-custom"></span>
+        </label>
+
+        <input type="text" placeholder="Provide your proposed solution here">
+        <a class="js-delete-item delete-item" href="#"><span class="icon-add"></span></a>
+      </div>
+
       {{#if todosReady}}
         {{#with _id}} {{! Establish new data context with only the '_id'
                           field. This way, when the 'incompleteCount' field
@@ -72,6 +88,28 @@
             <div class="title-message">Loading tasks...</div>
           </div>
       {{/if}}
+      <div class="list-item {{checkedClass}} {{editingClass}}" style="border-bottom: 1px solid black; height: inherit;">
+
+{{#markdown}}
+
+```js
+
+console.log(printHello());
+/**
+ * provides the hello world string when called
+ * @return String hello world
+ */
+function printHello(){
+
+  return "Hello World";
+
+}
+
+```
+
+{{/markdown}}
+
+      </div>
     </div>
   </div>
 </template>
