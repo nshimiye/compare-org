@@ -51,24 +51,15 @@
         </div>
       {{/if}}
 
-      <form class="js-todo-new todo-new input-symbol">
+      <!-- <form class="js-todo-new todo-new input-symbol">
         <input type="text" placeholder="Chose category">
-        <span class="js-todo-add"></span>
+        <span class="js-todo-add"></span>-->
         <!-- <span class="icon-add js-todo-add"></span> -->
-      </form>
+      <!-- </form>  -->
     </nav>
 
 
     <div class="content-scrollable list-items">
-      <div class="list-item {{checkedClass}} {{editingClass}}" style="border-bottom: 1px solid black;">
-        <label class="checkbox">
-          <!-- <input type="checkbox" name="checked"> -->
-          <span class="checkbox-custom"></span>
-        </label>
-
-        <input type="text" placeholder="Provide your proposed solution here">
-        <a class="js-delete-item delete-item" href="#"><span class="icon-add"></span></a>
-      </div>
 
       {{#if todosReady}}
         {{#with _id}} {{! Establish new data context with only the '_id'
@@ -110,6 +101,15 @@ function printHello(){
 {{/markdown}}
 
       </div>
+
+      <div class="list-item {{checkedClass}} {{editingClass}}" style="border-bottom: 1px solid black;">
+        <form class="js-todo-new todo-new input-symbol">
+          <input type="text" placeholder="Chose category">
+          <span class="js-todo-add"></span>
+          <!-- <span class="icon-add js-todo-add"></span> -->
+        </form>
+      </div>
+
     </div>
   </div>
 </template>
