@@ -1,0 +1,189 @@
+<style media="screen">
+.huge {
+  font-size: 40px;
+}
+
+.custom-panel {
+  margin: 5px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-default {
+  border-color: #ddd;
+}
+
+.panel-default .panel-heading {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+.panel-primary {
+  border-color: #337ab7;
+}
+
+.panel-primary .panel-heading {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+.panel-green {
+  border-color: #5cb85c;
+}
+.panel-green .panel-heading {
+  border-color: #5cb85c;
+  color: #fff;
+  background-color: #5cb85c;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+</style>
+<section class="container" style="overflow-y: scroll;">
+<div class="row">
+  <div class="small-12 columns" >
+
+
+    <div class="custom-panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="small-3 columns">
+                    <i class="fa fa-comments fa-5x"></i>
+                </div>
+                <div class="small-9 columns text-right">
+                    <div class="huge">$10.89</div>
+                    <div>Store: Laut restaurent</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="small-6 columns">
+                <div class="custom-panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="small-3 columns">
+                                <i class="fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="small-9 columns text-right">
+                                <div class="huge">26</div>
+                                <div> Items of same kind bought </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                          {{!-- <span class="pull-left">In Store Price Comparison</span> --}}
+                            <span class="pull-left"> Buying Frequencies </span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="small-6 columns">
+                <div class="custom-panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="small-3 columns">
+                                <i class="fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="small-9 columns text-right">
+                                <div class="huge">3rd</div>
+                                <div>Most expensive item you have bought</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">Price Rankings</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="panel-footer">
+          <div class="progress large-12 secondary">
+            <span class="meter" style="width: 90%"></span>
+          </div>
+          <div class="progress large-12 alert">
+            <span class="meter " style="width: 60%"></span>
+          </div>
+            {{!-- <span class="pull-left">Price Rankings</span> --}}
+            {{!-- <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span> --}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class="row" style="max-width: 100%; margin-top: 3em;">
+
+  <div class="small-12 columns" >
+
+    <form>
+      <textarea class="error" placeholder="Say Something about this item..."></textarea>
+      {{!-- <small class="error">Invalid entry</small> --}}
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row collapse">
+            <div class="small-10 columns">
+              {{!-- <input type="text" placeholder="Hex Value"> --}}
+            </div>
+            <div class="small-2 columns">
+              <a href="#" class="button postfix">Save</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="small-12 columns" style="padding: 0">
+
+    {{timeline-ui logList=itemLogs}}
+
+  </div>
+</div>
+</section>

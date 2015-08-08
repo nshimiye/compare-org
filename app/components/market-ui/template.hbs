@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-divider">
+    Store: {{market.name}}
+  </div>
+</div>
+
+{{#each market.receipts as |receipt index|}}
+  {{receipt-ui receipt=receipt}}
+{{/each}}
